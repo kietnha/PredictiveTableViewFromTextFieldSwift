@@ -17,50 +17,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i81-hU-Fhe">
-                                <rect key="frame" x="225.5" y="195" width="150" height="40"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SK5-bC-dH2">
+                                <rect key="frame" x="175" y="167.5" width="250" height="265"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OER-le-FO4">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="35"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="0bo-pU-hIs"/>
+                                            <constraint firstAttribute="width" constant="250" id="fcj-J2-duD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i81-hU-Fhe">
+                                        <rect key="frame" x="0.0" y="55" width="250" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="8n1-or-bmp"/>
+                                            <constraint firstAttribute="height" constant="40" id="Vqw-6B-J3G"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="CM8-sx-8kj"/>
+                                        </connections>
+                                    </textField>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cER-XB-evW">
+                                        <rect key="frame" x="0.0" y="115" width="250" height="150"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="IUh-jS-5ty"/>
+                                            <constraint firstAttribute="height" constant="150" id="hPG-0k-wue"/>
+                                        </constraints>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="fGz-MS-ytb">
+                                                <rect key="frame" x="0.0" y="28" width="250" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fGz-MS-ytb" id="GH0-h4-1S0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="d2i-k3-tT2"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="TC5-Iv-BK0"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="bIQ-FE-nKj"/>
-                                    <constraint firstAttribute="width" constant="150" id="heZ-0e-4Ow"/>
+                                    <constraint firstAttribute="height" constant="158" id="acY-Er-Ksk"/>
+                                    <constraint firstAttribute="width" constant="250" id="jNs-Qm-3Pi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="CM8-sx-8kj"/>
-                                </connections>
-                            </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cER-XB-evW">
-                                <rect key="frame" x="180" y="289" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="4SE-wK-oSV"/>
-                                    <constraint firstAttribute="height" constant="128" id="VbY-Se-PjY"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="fGz-MS-ytb">
-                                        <rect key="frame" x="0.0" y="28" width="240" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fGz-MS-ytb" id="GH0-h4-1S0">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="d2i-k3-tT2"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="TC5-Iv-BK0"/>
-                                </connections>
-                            </tableView>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="acY-Er-Ksk"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cER-XB-evW" firstAttribute="top" secondItem="i81-hU-Fhe" secondAttribute="bottom" constant="54" id="YPf-5y-3EC"/>
-                            <constraint firstItem="i81-hU-Fhe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="175" id="lYX-9C-LKw"/>
-                            <constraint firstItem="i81-hU-Fhe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sDh-GX-ojs"/>
-                            <constraint firstItem="cER-XB-evW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ynq-5d-1mT"/>
+                            <constraint firstItem="SK5-bC-dH2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1L0-eA-qiC"/>
+                            <constraint firstItem="SK5-bC-dH2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="R5q-zD-2Ko"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="label" destination="OER-le-FO4" id="Ufx-7g-I40"/>
                         <outlet property="tableView" destination="cER-XB-evW" id="9LE-94-0i5"/>
                         <outlet property="textField" destination="i81-hU-Fhe" id="85T-LD-QNs"/>
                     </connections>

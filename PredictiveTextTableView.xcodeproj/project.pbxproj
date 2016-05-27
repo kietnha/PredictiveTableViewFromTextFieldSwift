@@ -12,6 +12,7 @@
 		2532F6071CF6E64B00E4048C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2532F6051CF6E64B00E4048C /* Main.storyboard */; };
 		2532F6091CF6E64B00E4048C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2532F6081CF6E64B00E4048C /* Assets.xcassets */; };
 		2532F60C1CF6E64B00E4048C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2532F60A1CF6E64B00E4048C /* LaunchScreen.storyboard */; };
+		25F181D51CF7C38F00421486 /* General+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F181D41CF7C38F00421486 /* General+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2532F6081CF6E64B00E4048C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2532F60B1CF6E64B00E4048C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2532F60D1CF6E64B00E4048C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25F181D41CF7C38F00421486 /* General+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "General+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +62,17 @@
 				2532F6081CF6E64B00E4048C /* Assets.xcassets */,
 				2532F60A1CF6E64B00E4048C /* LaunchScreen.storyboard */,
 				2532F60D1CF6E64B00E4048C /* Info.plist */,
+				25F181D61CF7C55F00421486 /* Extensions */,
 			);
 			path = PredictiveTextTableView;
+			sourceTree = "<group>";
+		};
+		25F181D61CF7C55F00421486 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				25F181D41CF7C38F00421486 /* General+Extension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2532F6041CF6E64B00E4048C /* ViewController.swift in Sources */,
+				25F181D51CF7C38F00421486 /* General+Extension.swift in Sources */,
 				2532F6021CF6E64B00E4048C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +298,7 @@
 				2532F6121CF6E64B00E4048C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
